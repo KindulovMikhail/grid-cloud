@@ -53,7 +53,7 @@ export class TutorialDetailsComponent implements OnInit {
     this.tutorialService.update(this.currentTutorial.id, this.currentTutorial)
       .subscribe(
         res => {
-          this.message = 'Туториал был успешно обновлен';
+          this.message = 'Note был успешно обновлен';
         },
         error => {
           console.log(error);

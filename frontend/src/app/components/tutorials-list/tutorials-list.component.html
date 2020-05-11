@@ -1,7 +1,7 @@
 <div class="list row">
   <div class="col-md-8">
     <div class="input-group mb-3">
-      <input type="text" class="form-control" placeholder="Search by title" [(ngModel)]="title"/>
+      <input type="text" class="form-control" placeholder="поиск" [(ngModel)]="title"/>
       <div class="input-group-append">
         <button class="btn btn-outline-secondary" type="button" (click)="searchTitle()">
           Поиск
@@ -10,7 +10,7 @@
     </div>
   </div>
   <div class="col-md-6">
-    <h4>Tutorials List</h4>
+    <h4>Notes List</h4>
     <ul class="list-group">
       <li
         class="list-group-item"
@@ -21,14 +21,14 @@
         {{ tutorial.title }}
       </li>
     </ul>
-
-    <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
+    <br>
+    <button class="btn btn-sm btn-outline-danger" (click)="removeAllTutorials()">
       Удалить все
     </button>
   </div>
   <div class="col-md-6">
     <div *ngIf="currentTutorial">
-      <h4>Tutorial</h4>
+      <h4>Note</h4>
       <div>
         <label><strong>Название:</strong></label> {{ currentTutorial.title }}
       </div>
@@ -39,17 +39,17 @@
       <div>
 
         <label><strong>Статус:</strong></label>
-        {{ currentTutorial.published ? "Published" : "Pending" }}
+        {{ currentTutorial.published ? "done" : "В ожидании" }}
       </div>
-
-      <a class="badge badge-warning" href="/tutorials/{{ currentTutorial.id }}">
+      <br>
+      <a class="btn btn-sm btn-outline-success" href="/tutorials/{{ currentTutorial.id }}">
         Изменить
       </a>
     </div>
 
     <div *ngIf="!currentTutorial">
       <br/>
-      <p>Нажмите на Tutorial...</p>
+      <p>Выберите note...</p>
     </div>
   </div>
 </div>

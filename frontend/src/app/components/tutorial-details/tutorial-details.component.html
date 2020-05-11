@@ -1,0 +1,40 @@
+<div *ngIf="currentTutorial" class="edit-form">
+  <h4>Note</h4>
+  <form>
+    <div class="form-group">
+      <label for="title">Название</label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="currentTutorial.title" name="title"
+        placeholder="введите название"/>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Описание</label>
+      <input type="text" class="form-control" id="description" [(ngModel)]="currentTutorial.description"
+        name="description" placeholder="введите описание"
+      />
+    </div>
+    <div class="form-group">
+      <label><strong>Статус:</strong></label>
+      {{ currentTutorial.published ? "done" : "В ожидании" }}
+    </div>
+  </form>
+
+  <button class="bntChange btn btn-sm btn-outline-primary" *ngIf="currentTutorial.published" (click)="updatePublished(false)">
+    Отменить
+  </button>
+  <button *ngIf="!currentTutorial.published" class="bntChange btn btn-sm btn-outline-primary" (click)="updatePublished(true)">
+    Закрыть
+  </button>
+
+  <button class="bntChange btn btn-sm btn-outline-danger" (click)="deleteTutorial()">
+    Удалить
+  </button>
+  <button type="submit" class="bntChange btn btn-sm btn-outline-success" (click)="updateTutorial()">
+    Обнавить
+  </button>
+  <p>{{ message }}</p>
+</div>
+<div *ngIf="!currentTutorial">
+  <br/>
+  <p>Не удается получить доступ к этому note ...</p>
+</div>

@@ -37,6 +37,7 @@ exports.findAll = (req, res) => {
 
   Tutorial.find(condition)
     .then(data => {
+      console.log('data', data);
       res.send(data);
     })
     .catch(err => {

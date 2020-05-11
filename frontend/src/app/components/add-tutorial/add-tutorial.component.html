@@ -1,0 +1,21 @@
+<div class="submit-form">
+  <div *ngIf="!submitted">
+    <h4>Добавить Note</h4>
+    <div class="form-group">
+      <label for="title">Название</label>
+      <input type="text" class="form-control"  [(ngModel)]="tutorial.title" id="title" required name="title"/>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Описание</label>
+      <textarea class="form-control" id="description"  name="description" [(ngModel)]="tutorial.description" required="">
+      </textarea>
+    </div>
+    <button (click)="saveTutorial()" class="btn btn-outline-success">Сохранить</button>
+  </div>
+  <div *ngIf="submitted">
+    <h4>Note сохранен</h4>
+    <br>
+    <button class="btn btn-outline-success" (click)="newTutorial()">Добавить ещё</button>
+  </div>
+</div>
