@@ -10,6 +10,12 @@ branches:
   only:
     - travis
 
+before_script:
+  - npm install -g @angular/cli
+
+script:
+  - yarn all_tests
+
 deploy:
   provider: heroku
   app: gridcloud
