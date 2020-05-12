@@ -1,9 +1,17 @@
-sudo: false
-
 language: node_js
 node_js:
-  - 10
+  - "10.4.1"
+sudo: true
+
+addons:
+  chrome: stable
 
 branches:
   only:
     - travis
+
+before_script:
+  - npm install -g @angular/cli
+
+script:
+  - yarn all_tests
