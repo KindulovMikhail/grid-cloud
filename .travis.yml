@@ -8,7 +8,7 @@ addons:
 
 branches:
   only:
-    - travis
+    - master
 
 before_script:
   - npm install -g @angular/cli
@@ -22,5 +22,5 @@ deploy:
   api_key:
     secure: "0fac01a3-0fe8-4e7b-b184-433ff72bd82a"
   on:
-      branch: travis
+      branch: master
 
