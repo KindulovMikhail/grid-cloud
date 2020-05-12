@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "test_headless": "ng test --watch false --browsers ChromeHeadless",
+    "all_tests": "yarn lint && yarn test_headless"
   },
   "private": true,
   "dependencies": {

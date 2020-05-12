@@ -1,3 +1,26 @@
 language: node_js
 node_js:
-  9
+  - 10
+sudo: true
+
+addons:
+  chrome: stable
+
+branches:
+  only:
+    - travis
+
+before_script:
+  - npm install -g @angular/cli
+
+script:
+  - yarn all_tests
+
+deploy:
+  provider: heroku
+  app: gridcloud
+  api_key:
+    secure: "0fac01a3-0fe8-4e7b-b184-433ff72bd82a"
+  on:
+      branch: travis
+
