@@ -6,7 +6,6 @@ describe('TutorialService', () => {
   beforeEach(() => TestBed.configureTestingModule({ imports: [
       HttpClientModule
     ]}));
-
   it('should be created', () => {
     const service: TutorialService = TestBed.get(TutorialService);
     expect(service).toBeTruthy();

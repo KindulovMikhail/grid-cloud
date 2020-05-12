@@ -10,15 +10,9 @@ branches:
   only:
     - travis
 
-before_script:
-  - npm install -g @angular/cli
-
-script:
-  - yarn all_tests
-
 deploy:
   provider: heroku
-  app: "gridcloud"
+  app: gridcloud
   api_key:
     secure: "0fac01a3-0fe8-4e7b-b184-433ff72bd82a"
 
