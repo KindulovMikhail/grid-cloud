@@ -22,5 +22,5 @@ deploy:
   api_key:
     secure: "0fac01a3-0fe8-4e7b-b184-433ff72bd82a"
   on:
-    all_branches: true
+    branch: travis
 
