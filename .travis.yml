@@ -20,7 +20,7 @@ deploy:
   provider: heroku
   app: gridcloud
   api_key:
-    secure: "0fac01a3-0fe8-4e7b-b184-433ff72bd82a"
+    secure: b842a229-75b7-460c-a073-a258d8fc41b5
   on:
       branch: master
 
