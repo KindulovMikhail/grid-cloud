@@ -16,7 +16,7 @@ before_script:
 
 script:
   - yarn all_tests
-  - preact build
+  - ng build --prod
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN --non-interactive
 deploy:
