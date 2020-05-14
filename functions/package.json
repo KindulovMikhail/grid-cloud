@@ -5,7 +5,7 @@
     "serve": "firebase emulators:start --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
-    "test": "mocha './tests/test.js' --require @babel/register exit",
+    "test": "mocha './tests/test.js' --require @babel/register --exit",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
   },

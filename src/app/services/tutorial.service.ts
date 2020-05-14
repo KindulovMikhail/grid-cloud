@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
-const baseUrl = 'http://localhost:8080/api/tutorials';
-
+// const baseUrl = 'https://us-central1-grid-cloud-6ce8b.cloudfunctions.net/app/api/tutorials';
+const baseUrl = '/api/tutorials';
 @Injectable({
   providedIn: 'root'
 })
