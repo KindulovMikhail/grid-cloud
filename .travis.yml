@@ -13,10 +13,12 @@ before_script:
   - npm install -g firebase-tools
   - npm install -g preact-cli
   - npm install
-
+  - npm install ./functions/package.json
+  - npm install ./functions/package.json
 script:
   - yarn all_tests
   - ng build --prod
+  - cd ./functions && npm start test && cd ./
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN --non-interactive
 

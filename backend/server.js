@@ -20,7 +20,6 @@ db.mongoose
     useUnifiedTopology: true
   })
   .then(() => {
-    console.log("Connected to database!");
   })
   .catch(err => {
     console.log("Cannot connect to database!", err);
@@ -33,7 +32,11 @@ app.get("/", (req, res) => {
 
 require("./app/routes/turorial.routes")(app);
 
-const PORT = process.env.PORT || 8080;
+const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+  console.log(`Server is running`);
 });
+
+// export default app;
+module.exports = app;
+// exports.appForTest = app;

@@ -4,21 +4,31 @@
   "description": "Grid and Cloud Project",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha './tests/test.js' --require @babel/register exit"
   },
   "keywords": [
     "nodejs",
     "express",
     "rest",
-    "api",
-    "mongodb"
+    "api"
   ],
   "author": "Kindulov Mikhail",
   "license": "ISC",
   "dependencies": {
+    "babel-register": "^6.26.0",
     "body-parser": "^1.19.0",
+    "chai-http": "^4.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.8.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2"
   }
 }
