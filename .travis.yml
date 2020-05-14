@@ -13,8 +13,7 @@ before_script:
   - npm install -g firebase-tools
   - npm install -g preact-cli
   - npm install
-  - npm install ./functions/package.json
-  - npm install ./functions/package.json
+  - cd ./functions && npm install
 script:
   - yarn all_tests
   - ng build --prod
