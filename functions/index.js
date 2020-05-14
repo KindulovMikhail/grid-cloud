@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-    origin: "http://localhost:4200"
+    origin: "https://us-central1-grid-cloud-6ce8b.cloudfunctions.net/app"
 };
 
 app.use(cors(corsOptions));
